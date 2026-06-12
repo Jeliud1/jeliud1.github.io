@@ -42,11 +42,34 @@ p { margin-bottom: 12px; color: #475569; line-height: 1.7; }
 .contact { background: #f8fafc; padding: 25px; border-radius: 12px; margin-top: 30px; text-align: center; }
 .contact a { color: #2563eb; font-weight: 600; margin: 0 10px; }
 
-.theme-btn { position: fixed; top: 20px; right: 20px; z-index: 999; background: white; border: none; border-radius: 50%; width: 45px; height: 45px; font-size: 22px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+.theme-btn { 
+  position: fixed; 
+  top: 20px; 
+  right: 20px; 
+  z-index: 999; 
+  background: white; 
+  border: none; 
+  border-radius: 50%; 
+  width: 45px; 
+  height: 45px; 
+  font-size: 22px; 
+  cursor: pointer; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
 body.dark { background: #0f172a; color: #e2e8f0; }
 body.dark .container { background: #1e293b; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
 body.dark h2, body.dark .skill-tag { background: #334155; color: #f8fafc; }
 body.dark input, body.dark textarea { background: #334155; color: #f8fafc; border: 1px solid #475569; }
+
+.contact-form { padding: 30px 40px; background: #f1f5f9; }
+.contact-form h3 { text-align: center; color: #1e40af; margin-bottom: 20px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 12px; border-radius: 8px; border: 1px solid #cbd5e1; font-family: 'Inter', sans-serif; }
+.contact-form button { width: 100%; padding: 14px; background: #2563eb; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; }
+.contact-form button:hover { background: #1e40af; }
 </style>
 </head>
   
@@ -104,6 +127,16 @@ body.dark input, body.dark textarea { background: #334155; color: #f8fafc; borde
       </p>
     </div>
   </div>
+
+  <div class="contact-form">
+  <h3>Kirim Pesan Langsung</h3>
+  <form action="mailto:jhonnyeliudtambunan@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="Nama" placeholder="Nama kamu" required>
+    <input type="email" name="Email" placeholder="Email kamu" required>
+    <textarea name="Pesan" placeholder="Tulis pesan untuk Jhonny..." rows="4" required></textarea>
+    <button type="submit">Kirim Pesan</button>
+  </form>
+</div>
 </div>
 
 <script>
