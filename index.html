@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jhonny Eliud - SAP SD/MM Key User</title>
+<style>
+{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+body { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); min-height: 100vh; padding: 20px; }
+.container { max-width: 950px; margin: 40px auto; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; animation: fadeIn 0.8s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+.header { background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%); color: white; padding: 50px 40px; text-align: center; position: relative; }
+.foto { width: 130px; height: 130px; border-radius: 50%; border: 5px solid white; object-fit: cover; margin-bottom: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.3); animation: zoomIn 0.6s ease 0.3s both; }
+@keyframes zoomIn { from { transform: scale(0); } to { transform: scale(1); } }
+h1 { font-size: 2.5rem; margin-bottom: 8px; animation: slideDown 0.6s ease 0.4s both; }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+.subtitle { font-size: 1.1rem; opacity: 0.95; animation: slideDown 0.6s ease 0.5s both; }
+
+.content { padding: 40px; }
+h2 { color: #1e40af; border-bottom: 3px solid #dbeafe; padding-bottom: 10px; margin-top: 35px; margin-bottom: 20px; font-size: 1.5rem; }
+p { margin-bottom: 12px; color: #475569; line-height: 1.7; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+.tag { background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); color: #1e40af; padding: 8px 16px; border-radius: 25px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; cursor: default; }
+.tag:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 6px 15px rgba(37,99,235,0.3); background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; }
+
+.flow { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); padding: 25px; border-left: 5px solid #3b82f6; border-radius: 12px; margin: 20px 0; animation: slideRight 0.6s ease 0.6s both; }
+@keyframes slideRight { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+
+.btn { display: inline-block; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white; padding: 14px 32px; border-radius: 10px; margin-top: 25px; font-weight: 700; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(37,99,235,0.4); }
+.btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(37,99,235,0.6); }
+
+.contact { background: #f8fafc; padding: 25px; border-radius: 12px; margin-top: 30px; text-align: center; }
+.contact a { color: #2563eb; font-weight: 600; margin: 0 10px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <img src="foto.jpg" alt="Jhonny Eliud" class="foto">
+    <h1>JHONNY ELIUD TAMBUNAN</h1>
+    <p class="subtitle">SAP SD/MM Key User | Order to Cash Specialist | Delfi</p>
+  </div>
+  
+  <div class="content">
+    <p>SAP Key User dengan pengalaman end-to-end Order to Cash di industri FMCG Delfi. Spesialis proses SO → DO → Billing → POD dengan fokus akurasi data & kecepatan siklus.</p>
+    
+    <a href="CV_Jhonny.pdf" class="btn">⬇ Download CV PDF</a>
+
+    <h2>Kompetensi SAP</h2>
+    <div class="tags">
+      <span class="tag">VA01 Sales Order</span>
+      <span class="tag">VL01N Outbound Delivery</span>
+      <span class="tag">VL02N Change DO</span>
+      <span class="tag">VF01 Billing</span>
+      <span class="tag">MIGO Goods Movement</span>
+      <span class="tag">VLPOD Input POD</span>
+      <span class="tag">VL09 Cancel GI</span>
+      <span class="tag">MMBE Stock Overview</span>
+      <span class="tag">ZSD_PODREPORT</span>
+      <span class="tag">VL06 Delivery Monitor</span>
+    </div>
+
+    <h2>Pengalaman O2C Delfi</h2>
+    <div class="flow">
+      <strong>🔄 Flow End-to-End:</strong><br>
+      VA01 Create SO → VL01N Create DO → LT06/LT22 Picking → VL02N PGI → VF01 Invoice → VLPOD POD Finish
+    </div>
+    <p><strong>Sales & Delivery:</strong> Handle 50+ SO/DO harian, monitoring via VL06, audit perubahan via VL22 + VF03</p>
+    <p><strong>POD & Retur:</strong> Input POD VLPOD, kejar DO belum POD pakai ZSD_PODREPORT, proses retur GR 122 + Credit Memo VF01</p>
+    <p><strong>Custom Report:</strong> Operasikan Z-Report Delfi untuk POD, Shipment, dan Faktur</p>
+
+    <div class="contact">
+      <h2>Hubungi Saya</h2>
+      <p>
+        <a href="https://linkedin.com/in/jhonny" target="_blank">LinkedIn</a> | 
+        <a href="mailto:jhonny@email.com">Email</a> | 
+        <a href="https://wa.me/628xx">WhatsApp</a>
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
