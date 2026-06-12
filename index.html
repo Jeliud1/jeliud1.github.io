@@ -70,6 +70,16 @@ body.dark input, body.dark textarea { background: #334155; color: #f8fafc; borde
 .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 12px; border-radius: 8px; border: 1px solid #cbd5e1; font-family: 'Inter', sans-serif; }
 .contact-form button { width: 100%; padding: 14px; background: #2563eb; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; }
 .contact-form button:hover { background: #1e40af; }
+
+.scroll-top { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; border: none; border-radius: 50%; background: white; cursor: pointer; z-index: 999; opacity: 0; visibility: hidden; transition: all 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; align-items: center; justify-content: center; }
+.scroll-top.show { opacity: 1; visibility: visible; }
+.scroll-top svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+.scroll-top circle.bg { fill: none; stroke: #e2e8f0; stroke-width: 4; }
+.scroll-top circle.progress { fill: none; stroke: #2563eb; stroke-width: 4; stroke-linecap: round; stroke-dasharray: 283; stroke-dashoffset: 283; transition: stroke-dashoffset 0.1s; }
+.scroll-top .arrow { font-size: 20px; color: #2563eb; font-weight: bold; position: relative; z-index: 1; }
+body.dark .scroll-top { background: #334155; }
+body.dark .scroll-top .arrow { color: #60a5fa; }
+body.dark .scroll-top circle.bg { stroke: #475569; }
 </style>
 </head>
   
@@ -143,8 +153,39 @@ body.dark input, body.dark textarea { background: #334155; color: #f8fafc; borde
 const btn = document.getElementById('theme-toggle');
 btn.onclick = () => {
   document.body.classList.toggle('dark');
-  btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-}
+  btn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙'; }  
+</script>
+<button id="scrollTop" class="scroll-top">
+  <svg viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" class="bg"></circle>
+    <circle cx="50" cy="50" r="45" class="progress"></circle>
+  </svg>
+  <span class="arrow">↑</span>
+</button>
+  
+<script>
+const scrollBtn = document.getElementById('scrollTop');
+const progressCircle = document.querySelector('.progress');
+const circumference = 2 * Math.PI * 45;
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.pageYOffset;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const scrollPercent = scrollTop / docHeight;
+  const offset = circumference - scrollPercent * circumference;
+  
+  progressCircle.style.strokeDashoffset = offset;
+  
+  if (scrollTop > 300) {
+    scrollBtn.classList.add('show');
+  } else {
+    scrollBtn.classList.remove('show');
+  }
+});
+
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 </script>
 </body>
 </html>
